@@ -35,7 +35,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add ${{ github.event.inputs.file_path }}
           git commit -m "Add user file via CI/CD pipeline" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
 
       - name: Run Publisher Script
         run: |
