@@ -47,5 +47,4 @@ if __name__ == '__main__':
     nats_server = sys.argv[1]
     raw_url = sys.argv[2]
     asyncio.run(run_publisher(nats_server, raw_url))
-
 # [END pubsub_code]
